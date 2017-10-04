@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<!-- Define Struts Tile for Front-End module -->
+	<definition name="baselayout" template="/layout/template.jsp">
+		<put-attribute name="title" value="Demo"/>
+		<put-attribute name="header" value="/layout/header.jsp" />
+		<put-attribute name="body" value="/layout/body.jsp" />
+		<put-attribute name="footer" value="/layout/footer.jsp" />
+	</definition>
+
+	<definition name="home" extends="baselayout">
+		<put-attribute name="title" value="Home page nek"/>
+		<put-attribute name="body" value="/views/home.jsp" />
+	</definition>
+	
+	<definition name="adminHome" extends="baselayout">
+		<put-attribute name="title" value="Admin home page"/>
+		<put-attribute name="body" value="/views/admin-home.jsp" />
+	</definition>
+	
+	<definition name="loginForm" extends="baselayout">
+		<put-attribute name="title" value="Login Page"/>
+		<put-attribute name="body" value="/views/login.jsp" />
+	</definition>
+	
+	<definition name="userProfile" extends="baselayout">
+		<put-attribute name="title" value="Profile Page"/>
+		<put-attribute name="body" value="/views/profile.jsp" />
+	</definition>
+
+</tiles-definitions>
